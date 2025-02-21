@@ -62,20 +62,20 @@ const SearchResults = ({ results }: SearchResultsProps) => {
 const SearchResultsSkeleton = () => {
   return (
     <>
-      {Array(6).map((_, i) => (
+      {new Array(6).fill(null).map((_, i) => (
         <div
           key={i}
           className="px-6 py-3 lg:w-1/3 md:w-1/2 w-[300px] max-w-[348px] max-h-[600px]"
         >
           <figure>
-            <Skeleton className="w-full h-[450px]" />
+            <Skeleton className="w-full h-[450px] bg-gray-300" />
           </figure>
-          <Skeleton className="flex flex-col justify-between h-[100px]">
-            <Skeleton className="w-full">Title: </Skeleton>
-            <Skeleton className="w-full">Genre: </Skeleton>
-            <Skeleton className="w-full">Rated: </Skeleton>
-            <Skeleton className="w-full">Cast: </Skeleton>
-            <Skeleton className="w-full">Runtime: </Skeleton>
+          <Skeleton className="flex flex-col justify-between h-[100px] bg-gray-300">
+            <Skeleton className="w-full bg-gray-300"></Skeleton>
+            <Skeleton className="w-full bg-gray-300"></Skeleton>
+            <Skeleton className="w-full bg-gray-300"></Skeleton>
+            <Skeleton className="w-full bg-gray-300"></Skeleton>
+            <Skeleton className="w-full bg-gray-300"></Skeleton>
           </Skeleton>
         </div>
       ))}
